@@ -2,7 +2,7 @@
 
 # 定义服务器IP变量
 SERVER_IP="39.100.100.120"
-sh mvn.sh
+sh mvn
 
 # 删除远程服务器旧文件
 ssh root@${SERVER_IP}  "ps -ef|grep java|grep -v grep|awk  '{print \"kill -9 \" $2}' |sh"
