@@ -8,11 +8,9 @@
 
 [二开手册](doc/second-develop.md)
 
-[工作流相关](doc/workflow.md)
-
 # 前端地址
 
-[aps-web](https://gitee.com/slsplatform/aps-inventory-sales)
+[aps-web](https://gitee.com/slsplatform/peanut-web-vue3)
 
 # 用户配置
 
@@ -38,6 +36,24 @@
 
 # 技术栈
 
+## 使用单体项目原因
+
+1. 开发效率与复杂度控制
+   1.1 架构简单，入门门槛低
+   1.2 代码集中，调试便捷
+   1.3 依赖管理简化
+2. 部署与运维成本优化
+   2.1 部署流程极简
+   2.2 资源占用低
+   2.3 版本迭代快速
+3. 稳定性与性能优势
+   3.1 避免分布式系统复杂性
+   3.2 测试成本低
+4. 业务与团队协作价值
+   4.1 适合业务快速迭代的初创阶段
+   4.2 团队协作成本低
+
+总结： 无太高并发，单一项目即可， 安全稳定， 部署资源需求低
 ## 后端
 
 | 组建名称              | 依赖版本         | 说明                                                                           |
@@ -145,24 +161,38 @@
 
 ```sql
  --  删除分库分表sql
-RENAME TABLE peanut_prod.aps_order_goods_bom_0 TO peanut_prod.aps_order_goods_bom;
-RENAME TABLE peanut_prod.aps_order_goods_project_config_0 TO peanut_prod.aps_order_goods_project_config;
-RENAME TABLE peanut_prod.aps_order_goods_sale_config_0 TO peanut_prod.aps_order_goods_sale_config;
-RENAME TABLE peanut_prod.aps_order_goods_status_date_0 TO peanut_prod.aps_order_goods_status_date;
-RENAME TABLE peanut_prod.aps_rolling_forecast_order_item_0 TO peanut_prod.aps_rolling_forecast_order_item;
-RENAME TABLE peanut_prod.aps_scheduling_goods_bom_0 TO peanut_prod.aps_scheduling_goods_bom;
-RENAME TABLE peanut_prod.aps_scheduling_goods_bom_total_0 TO peanut_prod.aps_scheduling_goods_bom_total;
+RENAME
+TABLE peanut_prod.aps_order_goods_bom_0 TO peanut_prod.aps_order_goods_bom;
+RENAME
+TABLE peanut_prod.aps_order_goods_project_config_0 TO peanut_prod.aps_order_goods_project_config;
+RENAME
+TABLE peanut_prod.aps_order_goods_sale_config_0 TO peanut_prod.aps_order_goods_sale_config;
+RENAME
+TABLE peanut_prod.aps_order_goods_status_date_0 TO peanut_prod.aps_order_goods_status_date;
+RENAME
+TABLE peanut_prod.aps_rolling_forecast_order_item_0 TO peanut_prod.aps_rolling_forecast_order_item;
+RENAME
+TABLE peanut_prod.aps_scheduling_goods_bom_0 TO peanut_prod.aps_scheduling_goods_bom;
+RENAME
+TABLE peanut_prod.aps_scheduling_goods_bom_total_0 TO peanut_prod.aps_scheduling_goods_bom_total;
 
 
 -- 执行分库分表sql
 
-RENAME TABLE peanut_prod.aps_order_goods_bom TO peanut_prod.aps_order_goods_bom_0;
-RENAME TABLE peanut_prod.aps_order_goods_project_config TO peanut_prod.aps_order_goods_project_config_0;
-RENAME TABLE peanut_prod.aps_order_goods_sale_config TO peanut_prod.aps_order_goods_sale_config_0;
-RENAME TABLE peanut_prod.aps_order_goods_status_date TO peanut_prod.aps_order_goods_status_date_0;
-RENAME TABLE peanut_prod.aps_rolling_forecast_order_item TO peanut_prod.aps_rolling_forecast_order_item_0;
-RENAME TABLE peanut_prod.aps_scheduling_goods_bom TO peanut_prod.aps_scheduling_goods_bom_0;
-RENAME TABLE peanut_prod.aps_scheduling_goods_bom_total TO peanut_prod.aps_scheduling_goods_bom_total_0;
+RENAME
+TABLE peanut_prod.aps_order_goods_bom TO peanut_prod.aps_order_goods_bom_0;
+RENAME
+TABLE peanut_prod.aps_order_goods_project_config TO peanut_prod.aps_order_goods_project_config_0;
+RENAME
+TABLE peanut_prod.aps_order_goods_sale_config TO peanut_prod.aps_order_goods_sale_config_0;
+RENAME
+TABLE peanut_prod.aps_order_goods_status_date TO peanut_prod.aps_order_goods_status_date_0;
+RENAME
+TABLE peanut_prod.aps_rolling_forecast_order_item TO peanut_prod.aps_rolling_forecast_order_item_0;
+RENAME
+TABLE peanut_prod.aps_scheduling_goods_bom TO peanut_prod.aps_scheduling_goods_bom_0;
+RENAME
+TABLE peanut_prod.aps_scheduling_goods_bom_total TO peanut_prod.aps_scheduling_goods_bom_total_0;
 
 ```
 

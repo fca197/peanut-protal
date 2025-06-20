@@ -1,4 +1,4 @@
-export JAVA_HOME=~/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home
+export JAVA_HOME=~/Library/Java/JavaVirtualMachines/corretto-21.0.7/Contents/Home
 echo $JAVA_HOME
 mvn -DskipTests clean compile package  -s ~/.m2/settings-read.xml
 
