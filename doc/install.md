@@ -130,8 +130,14 @@
 
 6. com.olivia:peanut-sdk: 下载失败
 
-> maven 下载失败, 请修改setting.xml,增加仓库配置 
+> maven 下载失败, 下载 [setting.xml](settings.xml) 到本地文件（ setting-peanut.xml ）,增加仓库配置 , idea中指定使用setting文件
+> ![idea修改mvnSetting](./image/mvn-setting.png)
 
 7. 缺少依赖，如： peanut-task 格式为: peanut-XXXX
 
-> 问题原因： 依赖暂时不提供该版本， 请联系开发人员申请该模块权限
+> 问题原因： 依赖暂时不提供该版本， 请联系开发人员申请该模块权限，或者取消模块依赖。
+
+8. 数据库导入失败
+
+> 如有报错：MySQL: Error Code: 1118 Row size too large (> 8126). Changing some columns to TEXT or BLOB  
+> 则执行sql关闭严格模式： set innodb_strict_mode = 0; 

@@ -2,6 +2,14 @@
 
 [免责声明](doc%2Fdisclaimers.md)
 
+# 商业授权书
+
+[商业授权书](doc/softwareBusinessLicenseManual.docx)
+
+# 项目文档
+
+[飞书文档](https://p7bwvczxyf.feishu.cn/drive/folder/Ou5TfjCrplXBLbd2bWlcVXsmn6g?from=from_copylink)
+
 # 安装文档
 
 [用户安装手册](doc/install.md)
@@ -22,13 +30,13 @@
 
 > 项目可按需引入，也可单独启动， 启动更自由
 
-| 模块名称    | 模块依赖          | 包含内容           | 仓库地址                                                |
-|---------|---------------|----------------|-----------------------------------------------------|
-| 基础模块    | peanut-base   | 基础配置           | [仓库地址](https://gitee.com/slsplatform/peanut-base)   |
-| 任务模块    | peanut-task   | 任务编排,历史查询，AI接入 | [仓库地址](https://gitee.com/slsplatform/peanut-task)   |
-| 工作流模块   | peanut-flow   | 工作流相关 ,未完全实现   | [仓库地址](https://gitee.com/slsplatform/peanut-flow )  |
-| 测试模块    | peanut-litter | 进存销，盘点项目，测试项目  | [仓库地址](https://gitee.com/slsplatform/peanut-litter) |
-| aps排产排程 | peanut-aps    | 排产排程系统         | [仓库地址](https://gitee.com/slsplatform/peanut-aps)    |
+| 模块名称    | 模块依赖          | 包含内容                  | 仓库地址                                                |
+|---------|---------------|-----------------------|-----------------------------------------------------|
+| 基础模块    | peanut-base   | 基础配置                  | [仓库地址](https://gitee.com/slsplatform/peanut-base)   |
+| aps排产排程 | peanut-aps    | 预测，排产排程系统             | [仓库地址](https://gitee.com/slsplatform/peanut-aps)    |
+| 任务模块    | peanut-task   | 任务编排,历史查询，AI接入 ,未完全实现 | [仓库地址](https://gitee.com/slsplatform/peanut-task)   |
+| 工作流模块   | peanut-flow   | 工作流相关 ,未完全实现          | [仓库地址](https://gitee.com/slsplatform/peanut-flow )  |
+| 测试模块    | peanut-litter | 进存销，盘点项目，测试项目         | [仓库地址](https://gitee.com/slsplatform/peanut-litter) |
 
 ## 项目依赖
 
