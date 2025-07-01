@@ -135,7 +135,7 @@ spring:
       connection-init-sql: select 2
       keepalive-time: 30000
       validation-timeout: 3000
-      leakDetectionThreshold: 30000
+      leakDetectionThreshold: 0
 
 
     driver-class-name: com.mysql.cj.jdbc.Driver
