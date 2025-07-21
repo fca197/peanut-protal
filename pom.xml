@@ -1,146 +1,147 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <artifactId>peanut-portal</artifactId>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <artifactId>peanut-portal</artifactId>
 
-    <build>
-        <finalName>app</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
-                    <mainClass>com.olivia.BootstrapApplication</mainClass>
+  <build>
+    <finalName>app</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <includeSystemScope>true</includeSystemScope>
+          <mainClass>com.olivia.BootstrapApplication</mainClass>
 
-                </configuration>
-                <groupId>org.springframework.boot</groupId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                        </manifest>
-                        <manifestEntries>
-                            <build-time>${maven.build.timestamp}</build-time>
-                            <build-version>${version}</build-version>
-                        </manifestEntries>
-                    </archive>
-                </configuration>
-                <version>3.2.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.36</version>
-                        </path>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                            <version>1.6.3</version>
-                        </path>
-
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <!--    <dependency>-->
-        <!--      <groupId>org.springframework.boot</groupId>-->
-        <!--      <artifactId>spring-boot-starter-websocket</artifactId>-->
-        <!--            </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.shardingsphere</groupId>-->
-        <!--            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>-->
-        <!--            <version>5.2.1</version>-->
-        <!--        </dependency>-->
-        <dependency>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <groupId>org.springframework.boot</groupId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>9.1.0</version>
-        </dependency>
-
-        <!--        分词-->
-        <!--        <dependency>-->
-        <!--            <groupId>com.hankcs</groupId>-->
-        <!--            <artifactId>hanlp</artifactId>-->
-        <!--            <version>portable-1.8.5</version>-->
-        <!--        </dependency>-->
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-            <scope>compile</scope>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>cn.solveplan</groupId>-->
-<!--            <artifactId>peanut-task</artifactId>-->
-<!--            <version>${peanut.version}</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>cn.solveplan</groupId>
-            <artifactId>peanut-aps</artifactId>
-            <version>2.0.1-SNAPSHOT </version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>1.6.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.solveplan</groupId>
-            <artifactId>peanut-base</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-    <groupId>cn.solveplan</groupId>
-    <modelVersion>4.0.0</modelVersion>
-    <name>peanut-portal</name>
-    <parent>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        </configuration>
         <groupId>org.springframework.boot</groupId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+            <manifestEntries>
+              <build-time>${maven.build.timestamp}</build-time>
+              <build-version>${version}</build-version>
+            </manifestEntries>
+          </archive>
+        </configuration>
         <version>3.2.0</version>
-        <!--        <version>3.4.3</version>-->
-    </parent>
-    <properties>
-        <java.version>21</java.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <camunda.spring-boot.version>7.21.0</camunda.spring-boot.version>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.boot.version>3.4.0</spring.boot.version>
-    </properties>
-    <url>http://maven.apache.org</url>
-    <version>2.0.0-SNAPSHOT</version>
-    <repositories>
-        <repository>
-            <id>ossrh-snapshots</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-        </repository>
-    </repositories>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>1.18.36</version>
+            </path>
+            <path>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>1.6.3</version>
+            </path>
+
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-websocket</artifactId>-->
+    <!--            </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.shardingsphere</groupId>-->
+    <!--            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>-->
+    <!--            <version>5.2.1</version>-->
+    <!--        </dependency>-->
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mail</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>9.1.0</version>
+    </dependency>
+
+    <!--        分词-->
+    <!--        <dependency>-->
+    <!--            <groupId>com.hankcs</groupId>-->
+    <!--            <artifactId>hanlp</artifactId>-->
+    <!--            <version>portable-1.8.5</version>-->
+    <!--        </dependency>-->
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+      <scope>compile</scope>
+    </dependency>
+    <!--        <dependency>-->
+    <!--            <groupId>cn.solveplan</groupId>-->
+    <!--            <artifactId>peanut-task</artifactId>-->
+    <!--            <version>${peanut.version}</version>-->
+    <!--        </dependency>-->
+    <dependency>
+      <groupId>cn.olivia</groupId>
+      <artifactId>peanut-aps</artifactId>
+      <version>2.0.2-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.6.3</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.olivia</groupId>
+      <artifactId>peanut-base</artifactId>
+      <version>2.0.2-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <groupId>cn.solveplan</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>peanut-portal</name>
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <version>3.5.3</version>
+    <!--        <version>3.4.3</version>-->
+  </parent>
+  <properties>
+    <java.version>21</java.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <camunda.spring-boot.version>7.21.0</camunda.spring-boot.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <spring.boot.version>3.4.0</spring.boot.version>
+  </properties>
+  <url>http://maven.apache.org</url>
+  <version>2.0.0-SNAPSHOT</version>
+  <repositories>
+    <repository>
+      <id>ossrh-snapshots</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+    </repository>
+  </repositories>
 </project>
