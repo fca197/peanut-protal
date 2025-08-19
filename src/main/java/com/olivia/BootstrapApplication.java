@@ -42,9 +42,9 @@ public class BootstrapApplication {
     try {
       SpringApplication.run(BootstrapApplication.class, args);
       log.info(">>>>>>>  BootstrapApplication  start success >>>>>>>");
-      ServiceNotice.start();
+      ServiceNotice.notifyStart();
     } catch (Exception e) {
-      ServiceNotice.errorStop(e);
+      ServiceNotice.notifyErrorStop(e);
     }
   }
 }
