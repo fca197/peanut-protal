@@ -8,6 +8,7 @@ sh mvn
 ssh root@${SERVER_IP}  "ps -ef|grep java|grep -v grep|awk  '{print \"kill -9 \" $2}' |sh"
 echo '旧文件删除成功'
 ssh root@${SERVER_IP}  "ps -ef |grep java"
+ssh root@${SERVER_IP}  "rm -rf /opt/app/app.jar_20*"
 ssh root@${SERVER_IP}  "mv /opt/app/app.jar /opt/app/app.jar_$(date +%Y%m%d%H%M%S)"
 
 # 上传新文件
