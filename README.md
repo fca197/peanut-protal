@@ -1,3 +1,6 @@
+# 迁移说明
+该代码已停止维护， 请访问 https://gitee.com/slsplatform/peanut-protal-all
+
 # 免责声明
 
 [免责声明](doc%2Fdisclaimers.md)
